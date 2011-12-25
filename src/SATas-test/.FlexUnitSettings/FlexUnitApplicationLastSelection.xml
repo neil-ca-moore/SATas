@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="" >
+<testsuite  name="Default Test Suite" project="SATas-test">
+<testsuite name="uk.co.bigoh.SATas:SATasTestSuite" type="testsuiteclass"/>
+</testsuite>
+</testrun>
