@@ -2,7 +2,7 @@
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
     <classEntry path="uk.co.bigoh.SATas.SATasTestSuite"/>
-    <classEntry path="uk.co.bigoh.SATas.core.VariableTest"/>
+    <classEntry path="uk.co.bigoh.SATas.core.SimpleVariablesTest"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
