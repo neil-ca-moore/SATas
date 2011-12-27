@@ -13,7 +13,6 @@ package uk.co.bigoh.SATas.core
 		public function SimpleVariablesTest()
 		{
 			super([]);
-			vars = new SimpleVariables();
 		}
 		
 		[Before]
@@ -129,6 +128,17 @@ package uk.co.bigoh.SATas.core
 			vars.pop();
 			//then
 			//exception
+		}
+		
+		[Test]
+		public function lengthWorks():void
+		{
+			//given
+			//when
+			vars.create(2);
+			vars.create(3);
+			//then
+			assertEquals(vars.length(), 5);
 		}
 	}
 }

@@ -2,6 +2,7 @@ package uk.co.bigoh.SATas
 {
 	import org.mockito.integrations.flexunit4.MockitoClassRunner;
 	
+	import uk.co.bigoh.SATas.core.SimpleOrderTest;
 	import uk.co.bigoh.SATas.core.SimpleVariablesTest;
 
 	[Suite]
@@ -10,5 +11,6 @@ package uk.co.bigoh.SATas
 	{
 		private var mockitoRunner:MockitoClassRunner;
 		public var variableTest:SimpleVariablesTest;
+		public var orderTest:SimpleOrderTest;
 	}
 }

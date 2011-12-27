@@ -13,5 +13,7 @@ package uk.co.bigoh.SATas.core
 		function push():void;
 		
 		function pop():void;
+		
+		function length():int;
 	}
 }

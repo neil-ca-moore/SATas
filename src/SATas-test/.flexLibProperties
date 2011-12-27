@@ -3,6 +3,7 @@
   <includeClasses>
     <classEntry path="uk.co.bigoh.SATas.SATasTestSuite"/>
     <classEntry path="uk.co.bigoh.SATas.core.SimpleVariablesTest"/>
+    <classEntry path="uk.co.bigoh.SATas.core.SimpleOrderTest"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

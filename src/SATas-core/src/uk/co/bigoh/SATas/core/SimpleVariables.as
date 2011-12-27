@@ -66,5 +66,10 @@ package uk.co.bigoh.SATas.core
 			}
 			throw new Error("tried to pop at root node");
 		}
+		
+		public function length():int
+		{
+			return vars.length;
+		}
 	}
 }
