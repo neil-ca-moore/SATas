@@ -59,7 +59,7 @@ package uk.co.bigoh.SATas.core
 			assertEquals(next, 2);
 		}
 		
-		[Test(expected="Error")]
+		[Test(expected="uk.co.bigoh.SATas.error.SolverError")]
 		public function failsWhenNoVariables():void
 		{
 			//given

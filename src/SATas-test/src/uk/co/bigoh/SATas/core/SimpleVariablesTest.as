@@ -1,9 +1,6 @@
 package uk.co.bigoh.SATas.core
 {
 	import org.mockito.MockitoTestCase;
-	import org.mockito.integrations.verify;
-	
-	import uk.co.bigoh.SATas.core.SimpleVariables;
 	
 	[RunWith("org.mockito.integrations.flexunit4.MockitoClassRunner")]
 	public class SimpleVariablesTest extends MockitoTestCase
@@ -46,7 +43,7 @@ package uk.co.bigoh.SATas.core
 			assertTrue(vars.get(0));
 		}
 		
-		[Test(expected="Error")]
+		[Test(expected="uk.co.bigoh.SATas.error.SolverError")]
 		public function gettingUnsetValueFails():void
 		{
 			//given
@@ -98,7 +95,7 @@ package uk.co.bigoh.SATas.core
 			assertFalse(vars.isSet(0));
 		}
 		
-		[Test(expected="Error")]
+		[Test(expected="uk.co.bigoh.SATas.error.SolverError")]
 		public function valueCanOnlyBeSetOnce():void
 		{
 			//given
@@ -110,7 +107,7 @@ package uk.co.bigoh.SATas.core
 			//exception
 		}
 			
-		[Test(expected="Error")]
+		[Test(expected="uk.co.bigoh.SATas.error.SolverError")]
 		public function cantSetOutOfRangeVariable():void
 		{
 			//given
@@ -120,7 +117,7 @@ package uk.co.bigoh.SATas.core
 			//exception
 		}
 		
-		[Test(expected="Error")]
+		[Test(expected="uk.co.bigoh.SATas.error.SolverError")]
 		public function poppingAtDepthZeroFails():void
 		{
 			//given

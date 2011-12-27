@@ -1,5 +1,7 @@
 package uk.co.bigoh.SATas.core
 {
+	import uk.co.bigoh.SATas.error.SolverError;
+
 	public class SimpleOrder implements Order
 	{
 		private var vars:Variables;
@@ -16,7 +18,7 @@ package uk.co.bigoh.SATas.core
 				if(!vars.isSet(i))
 					return i;
 			if(count == 0)
-				throw new Error("nothing unset");
+				throw new SolverError("nothing unset");
 			else
 				return -1;
 		}

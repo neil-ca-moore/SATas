@@ -1,5 +1,7 @@
 package uk.co.bigoh.SATas.core
 {
+	import uk.co.bigoh.SATas.error.SolverError;
+
 	public class SimpleVariables implements Variables
 	{
 		private var vars:Array; //TODO more efficient data structures
@@ -23,9 +25,9 @@ package uk.co.bigoh.SATas.core
 		public function set(i:int, b:Boolean):void
 		{
 			if(i >= vars.length)
-				throw new Error("variable doesn't exist");
+				throw new SolverError("variable doesn't exist");
 			if(vars[i] != null)
-				throw new Error("already set");
+				throw new SolverError("already set");
 			vars[i] = b;
 			isset[i] = true;
 			trail.push(i);
@@ -34,11 +36,11 @@ package uk.co.bigoh.SATas.core
 		public function get(i:int):Boolean
 		{
 			if(i >= vars.length)
-				throw new Error("variable doesn't exist");
+				throw new SolverError("variable doesn't exist");
 			if(isset[i])
 				return vars[i];
 			else
-				throw new Error("variable not set, so can't get() it");
+				throw new SolverError("variable not set, so can't get() it");
 		}
 		
 		public function isSet(i:int):Boolean
@@ -64,7 +66,7 @@ package uk.co.bigoh.SATas.core
 				else
 					isset[idx] = false;
 			}
-			throw new Error("tried to pop at root node");
+			throw new SolverError("tried to pop at root node");
 		}
 		
 		public function length():int

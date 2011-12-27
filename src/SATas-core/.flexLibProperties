@@ -4,6 +4,7 @@
     <classEntry path="uk.co.bigoh.SATas.core.Variables"/>
     <classEntry path="uk.co.bigoh.SATas.core.Order"/>
     <classEntry path="uk.co.bigoh.SATas.core.SimpleOrder"/>
+    <classEntry path="uk.co.bigoh.SATas.error.SolverError"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
