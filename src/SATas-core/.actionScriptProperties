@@ -9,13 +9,17 @@
           <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/core.swc" useDefaultLinkType="false"/>
         </excludedEntries>
       </libraryPathEntry>
+      <libraryPathEntry kind="3" linkType="1" path="lib/parsley-flex4-2.4.1.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="lib/spicelib-flex-2.4.0.swc" useDefaultLinkType="false"/>
     </libraryPath>
     <sourceAttachmentPath/>
   </compiler>
   <applications>
     <application path="SATas-core.as"/>
   </applications>
-  <modules/>
+  <modules>
+    <module application="src/SATas-core.as" destPath="uk/co/bigoh/SATas/ParsleyConfig.swf" optimize="true" sourcePath="src/uk/co/bigoh/SATas/ParsleyConfig.mxml"/>
+  </modules>
   <buildCSSFiles/>
   <flashCatalyst validateFlashCatalystCompatibility="false"/>
 </actionScriptProperties>

@@ -5,6 +5,9 @@
     <classEntry path="uk.co.bigoh.SATas.core.Order"/>
     <classEntry path="uk.co.bigoh.SATas.core.SimpleOrder"/>
     <classEntry path="uk.co.bigoh.SATas.error.SolverError"/>
+    <classEntry path="uk.co.bigoh.SATas.commands.DimacsReader"/>
+    <classEntry path="uk.co.bigoh.SATas.core.DimacsParser"/>
+    <classEntry path="uk.co.bigoh.SATas.core.Constraints"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
