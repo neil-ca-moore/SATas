@@ -28,8 +28,8 @@ package uk.co.bigoh.SATas.core
 		
 		public function SimpleVariables()
 		{
-			vars = new Array();
-			isset = new Array();
+			vars = new Array(1); //first element is ignored
+			isset = new Array(1);
 			trail = new Array();
 		}
 		
@@ -41,7 +41,7 @@ package uk.co.bigoh.SATas.core
 		
 		public function set(i:int, b:Boolean):void
 		{
-			if(i >= vars.length)
+			if(i == 0 || i >= vars.length)
 				throw new SolverError("variable doesn't exist");
 			if(vars[i] != null)
 				throw new SolverError("already set");
@@ -52,7 +52,7 @@ package uk.co.bigoh.SATas.core
 		
 		public function get(i:int):Boolean
 		{
-			if(i >= vars.length)
+			if(i == 0 || i >= vars.length)
 				throw new SolverError("variable doesn't exist");
 			if(isset[i])
 				return vars[i];
@@ -88,7 +88,7 @@ package uk.co.bigoh.SATas.core
 		
 		public function length():int
 		{
-			return vars.length;
+			return vars.length - 1; //first element is ignored
 		}
 	}
 }

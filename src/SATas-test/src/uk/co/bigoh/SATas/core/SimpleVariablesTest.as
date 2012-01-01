@@ -42,10 +42,10 @@ package uk.co.bigoh.SATas.core
 			const COUNT:int = 10;
 			vars.create(COUNT);
 			//when
-			for(var i:int = 0; i < COUNT; i++)
+			for(var i:int = 1; i <= COUNT; i++)
 				vars.set(i, true);
 			//then
-			for(var j:int = 0; j < COUNT; j++)
+			for(var j:int = 1; j <= COUNT; j++)
 				assertTrue(vars.isSet(j));
 		}
 		
@@ -55,9 +55,9 @@ package uk.co.bigoh.SATas.core
 			//given
 			vars.create(1);
 			//when
-			vars.set(0, true);
+			vars.set(1, true);
 			//then
-			assertTrue(vars.get(0));
+			assertTrue(vars.get(1));
 		}
 		
 		[Test(expected="uk.co.bigoh.SATas.error.SolverError")]
@@ -67,7 +67,7 @@ package uk.co.bigoh.SATas.core
 			vars.create(1);
 			//when
 			//then
-			vars.get(0);
+			vars.get(1);
 		}
 		
 		[Test]
@@ -77,12 +77,12 @@ package uk.co.bigoh.SATas.core
 			vars.create(2);
 			//when
 			//then
-			assertFalse(vars.isSet(1));
+			assertFalse(vars.isSet(2));
 			
 			//when
-			vars.set(1, false);
+			vars.set(2, false);
 			//then
-			assertTrue(vars.isSet(1));
+			assertTrue(vars.isSet(2));
 		}
 		
 		[Test]
@@ -91,12 +91,12 @@ package uk.co.bigoh.SATas.core
 			//given
 			vars.create(1);
 			//when
-			vars.set(0, true);
+			vars.set(1, true);
 			vars.push();
 			vars.pop();
 			//then
-			assertTrue(vars.isSet(0));
-			assertTrue(vars.get(0));
+			assertTrue(vars.isSet(1));
+			assertTrue(vars.get(1));
 		}
 		
 		[Test]
@@ -106,10 +106,10 @@ package uk.co.bigoh.SATas.core
 			vars.create(1);
 			//when
 			vars.push();
-			vars.set(0, true);
+			vars.set(1, true);
 			vars.pop();
 			//then
-			assertFalse(vars.isSet(0));
+			assertFalse(vars.isSet(1));
 		}
 		
 		[Test(expected="uk.co.bigoh.SATas.error.SolverError")]
@@ -118,8 +118,8 @@ package uk.co.bigoh.SATas.core
 			//given
 			vars.create(1);
 			//when
-			vars.set(0, false);
-			vars.set(0, false);
+			vars.set(1, false);
+			vars.set(1, false);
 			//then
 			//exception
 		}
@@ -129,7 +129,7 @@ package uk.co.bigoh.SATas.core
 		{
 			//given
 			//when
-			vars.set(0, false);
+			vars.set(1, false);
 			//then
 			//exception
 		}
